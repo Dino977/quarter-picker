@@ -29,7 +29,7 @@ npm install @heydino/quarter-picker
 ```js
 import Vue from 'vue';
 import App from './App.vue';
-import QuarterPicker from '@heydino/quarter-picker';
+import QuarterPicker from '@hey_dino/quarter-picker';
 import '@heydino/quarter-picker/lib/style/index.css';
 
 Vue.use(QuarterPicker);
@@ -46,7 +46,7 @@ new Vue({
 
 ```html
 <script>
-import QuarterPicker from '@heydino/quarter-picker';
+import QuarterPicker from '@hey_dino/quarter-picker';
 
 export default {
   components: { QuarterPicker },

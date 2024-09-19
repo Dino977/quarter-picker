@@ -1,5 +1,5 @@
 {
-  "name": "@heydino/quarter-picker",
+  "name": "@hey_dino/quarter-picker",
   "version": "1.0.0-beta.1",
   "description": "A Vue component for selecting quarter",
   "main": "./lib/bundle.js",
@@ -13,6 +13,9 @@
     "clean": "rimraf lib",
     "build:style": "gulp build --gulpfile ./package/style/gulpfile.js && cp-cli ./package/style/lib ./lib/style && rimraf ./package/style/lib",
     "dist": "npm run clean && webpack --config ./build/webpack.common.js && webpack --config ./build/webpack.config.js && npm run build:style"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
