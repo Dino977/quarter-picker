@@ -1,0 +1,52 @@
+{
+  "name": "release-base",
+  "version": "1.0.0-beta.1",
+  "description": "单一组件式依赖基础配置",
+  "main": "./lib/bundle.js",
+  "files": [
+    "lib",
+    "package",
+    "src",
+    "package.json"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "build:style": "gulp build --gulpfile ./package/style/gulpfile.js && cp-cli ./package/style/lib ./lib/style && rimraf ./package/style/lib",
+    "dist": "npm run clean && webpack --config ./build/webpack.common.js && webpack --config ./build/webpack.config.js && npm run build:style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dino977/release-base.git"
+  },
+  "keywords": [
+    "vue",
+    "element-ui",
+    "component"
+  ],
+  "author": "HeyDino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dino977/release-base/issues"
+  },
+  "homepage": "https://github.com/Dino977/release-base#readme",
+  "peerDependencies": {
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-loader": "^9.2.1",
+    "cp-cli": "^1.1.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^5.1.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.79.1",
+    "vue-loader": "^15.11.1",
+    "vue-template-compiler": "^2.7.16",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {}
+}
