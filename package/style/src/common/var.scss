@@ -1,0 +1,20 @@
+$--color-primary: #409EFF !default;
+// 
+$--quarter-picker-padding: 12px 0 !default;
+$--quarter-picker-margin: 0 12px !default;
+$--quarter-picker-border-bottom: 1px solid #f2f2f2 !default;
+$--quarter-picker-hover-color: $--color-primary !default;
+$--quarter-picker-today-color: $--color-primary !default;
+$--quarter-picker-today-font-weight: bold !default;
+$--quarter-picker-disabled-color: #c0c4cc !default;
+$--quarter-picker-disabled-background-color: #f5f7fa !default;
+// 
+$--quarter-picker-header-label-font-size: 16px !default;
+$--quarter-picker-header-icon-size: 12px !default;
+// 
+$--quarter-picker-content-margin: 0 16px 4px !default;
+$--quarter-picker-content-td-padding: 12px 4px !default;
+$--quarter-picker-content-cell-width: 64px !default;
+$--quarter-picker-content-cell-height: 36px !default;
+$--quarter-picker-content-cell-line-height: $--quarter-picker-content-cell-height !default;
+$--quarter-picker-content-cell-border-radius: 8px !default;

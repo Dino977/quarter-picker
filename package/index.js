@@ -1,3 +1,3 @@
-import Main from "./components/main.vue";
+import Picker from "./components/picker.vue";
 
-export default Main;
+export default Picker;

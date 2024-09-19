@@ -1,5 +1,8 @@
 const path = require("path");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+
+const config = require("./config");
 
 module.exports = {
   mode: "production",
@@ -10,6 +13,9 @@ module.exports = {
     library: {
       type: "commonjs2",
     },
+  },
+  resolve: {
+    alias: config.alias,
   },
   module: {
     rules: [
@@ -25,4 +31,11 @@ module.exports = {
     ],
   },
   plugins: [new VueLoaderPlugin()],
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false, // 移除注释
+      }),
+    ],
+  },
 };
