@@ -1,6 +1,6 @@
 {
   "name": "@hey_dino/quarter-picker",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "A Vue component for selecting quarter",
   "main": "./lib/bundle.js",
   "files": [
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dino977/release-base.git"
+    "url": "git+https://github.com/Dino977/quarter-picker"
   },
   "keywords": [
     "vue",
@@ -29,9 +29,9 @@
   "author": "HeyDino",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dino977/release-base/issues"
+    "url": "https://github.com/Dino977/quarter-picker/issues"
   },
-  "homepage": "https://github.com/Dino977/release-base#readme",
+  "homepage": "https://github.com/Dino977/quarter-picker",
   "peerDependencies": {
     "vue": "^2.6.14"
   },
