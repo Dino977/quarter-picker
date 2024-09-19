@@ -13,7 +13,7 @@
 ## 安装
 
 ```bash
-npm install @heydino/quarter-picker
+npm install @hey_dino/quarter-picker
 ```
 
 ## 注册
@@ -30,7 +30,7 @@ npm install @heydino/quarter-picker
 import Vue from 'vue';
 import App from './App.vue';
 import QuarterPicker from '@hey_dino/quarter-picker';
-import '@heydino/quarter-picker/lib/style/index.css';
+import '@hey_dino/quarter-picker/lib/style/index.css';
 
 Vue.use(QuarterPicker);
 
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style>
-@import '@heydino/quarter-picker/lib/style/index.css'
+@import '@hey_dino/quarter-picker/lib/style/index.css'
 </style>
 ```
 
