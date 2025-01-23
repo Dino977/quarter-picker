@@ -203,11 +203,11 @@ export default {
 
       const map = mapping.quarter;
       const year = 3.1536e10;
-      const now = new Date(this.value).getTime();
-      const newDate = new Date(this.value);
+      const nowDate = this.value ? new Date(this.value) : new Date();
+      const newDate = new Date(nowDate);
 
       // 循环执行，避免中间穿插禁用项时，无法选中
-      while (Math.abs(newDate.getTime() - now) <= year) {
+      while (Math.abs(newDate.getTime() - nowDate.getTime()) <= year) {
         map.offset(newDate, map[keyCode]);
 
         const startTime = newDate;
