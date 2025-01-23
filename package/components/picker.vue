@@ -304,6 +304,18 @@ export default {
           this.panelVisible = false;
           event.stopPropagation();
           return;
+        // 向上
+        case 38:
+        // 向下
+        case 40:
+        // 向左
+        case 37:
+        // 向右
+        case 39: {
+          const panelKeydownFunc = this.$refs.panel?.handleKeydown;
+          panelKeydownFunc && panelKeydownFunc(event);
+          return;
+        }
       }
     },
     handleCloseIconClick() {
@@ -322,10 +334,10 @@ export default {
       if (!this.panelVisible) return;
       this.panelVisible = false;
     },
-    handlePick(value) {
+    handlePick(value, visible = false) {
       this.emitInput(value);
       this.emitChange(value);
-      this.panelVisible = false;
+      this.panelVisible = visible;
     },
   },
 };

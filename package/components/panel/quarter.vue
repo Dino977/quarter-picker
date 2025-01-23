@@ -177,6 +177,52 @@ export default {
       );
       this.$emit('pick', newValue);
     },
+    handleKeydown(event) {
+      const keyCode = event.keyCode;
+      const list = [38, 40, 37, 39];
+
+      if (this.visible) {
+        if (list.includes(keyCode)) {
+          this.handleKeyControl(keyCode);
+          event.stopPropagation();
+          event.preventDefault();
+        }
+      }
+    },
+    handleKeyControl(keyCode) {
+      const mapping = {
+        year: {},
+        quarter: {
+          38: -4,
+          40: 4,
+          37: -1,
+          39: 1,
+          offset: (date, step) => date.setMonth(date.getMonth() + step * 3),
+        },
+      };
+
+      const map = mapping.quarter;
+      const year = 3.1536e10;
+      const now = new Date(this.value).getTime();
+      const newDate = new Date(this.value);
+
+      // 循环执行，避免中间穿插禁用项时，无法选中
+      while (Math.abs(newDate.getTime() - now) <= year) {
+        map.offset(newDate, map[keyCode]);
+
+        const startTime = newDate;
+        const endTime = dayjs(startTime).endOf('quarter').toDate();
+        if (
+          typeof this.disabledDate === 'function' &&
+          this.disabledDate({ startTime, endTime })
+        ) {
+          continue;
+        }
+
+        this.$emit('pick', dayjs(newDate).format(this.valueFormat), true);
+        break;
+      }
+    },
   },
 };
 </script>
