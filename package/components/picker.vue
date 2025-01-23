@@ -33,12 +33,11 @@
       />
     </el-input>
 
-    <!-- 设置为true时，在v-clickoutside的作用，会致使 点击popover导致其关闭
-          el-date-picker中，是将弹出框直接appendChild到输入框内部 -->
     <quarter-panel
+      ref="panel"
       :value="value"
       :value-format="actualValueFormat"
-      :append-to-body="false"
+      :append-to-body="appendToBody"
       :popper-class="popperClass"
       :visible.sync="panelVisible"
       :reference="mountPanel ? $refs.reference.$el : undefined"
@@ -145,6 +144,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    appendToBody: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
@@ -197,6 +200,10 @@ export default {
         });
       }
     },
+  },
+  mounted() {
+    // 绑定额外参数，规避 clickoutside 触发时，popper被意外关闭
+    this.popperElm = this.$refs.panel.$el.childNodes[0];
   },
   methods: {
     focus() {

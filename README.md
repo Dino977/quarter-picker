@@ -96,24 +96,25 @@ export default {
 
 ## Attributes
 
-| 名称           | 说明                                 | 类型    | 可选值                | 默认值               |
-| -------------- | ------------------------------------ | ------- | --------------------- | -------------------- |
-| value/v-model  | 绑定值，默认返回 所选季度 的初始日期 | String  | —                     | —                    |
-| readonly       | 只读                                 | Boolean | —                     | false                |
-| disabled       | 禁用                                 | Boolean | —                     | false                |
-| editable       | 支持手动输入                         | Boolean | —                     | true                 |
-| clearable      | 支持一键清空                         | Boolean | —                     | true                 |
-| width          | 输入框宽度                           | String  | —                     | 220px                |
-| size           | 输入框高度                           | String  | medium / small / mini | —                    |
-| placeholder    | 占位内容                             | String  | —                     | —                    |
-| format         | 显示值格式                           | String  | 见上方 日期格式       | YYYY-[Q]Q            |
-| value-format   | 绑定值格式                           | String  | 见上方 日期格式       | YYYY-MM-DD           |
-| popper-class   | 弹出框类名                           | String  | —                     | —                    |
-| picker-options | 特殊配置项，详见下表                 |         |                       |                      |
-| name           | 输入框元素属性                       | String  | —                     | —                    |
-| prefix-icon    | 自定义头部图标的名称                 | String  | —                     | el-icon-date         |
-| clear-icon     | 自定义清空图标的名称                 | String  | —                     | el-icon-circle-close |
-| validate-event | 绑定值发生变化时，是否触发表单的校验 | Boolean | —                     | true                 |
+| 名称           | 说明                                     | 类型    | 可选值                | 默认值               |
+| -------------- | ---------------------------------------- | ------- | --------------------- | -------------------- |
+| value/v-model  | 绑定值，默认返回 所选季度 的初始日期     | String  | —                     | —                    |
+| readonly       | 只读                                     | Boolean | —                     | false                |
+| disabled       | 禁用                                     | Boolean | —                     | false                |
+| editable       | 支持手动输入                             | Boolean | —                     | true                 |
+| clearable      | 支持一键清空                             | Boolean | —                     | true                 |
+| width          | 输入框宽度                               | String  | —                     | 220px                |
+| size           | 输入框高度                               | String  | medium / small / mini | —                    |
+| placeholder    | 占位内容                                 | String  | —                     | —                    |
+| format         | 显示值格式                               | String  | 见上方 日期格式       | YYYY-[Q]Q            |
+| value-format   | 绑定值格式                               | String  | 见上方 日期格式       | YYYY-MM-DD           |
+| popper-class   | 弹出框类名                               | String  | —                     | —                    |
+| picker-options | 特殊配置项，详见下表                     |         |                       |                      |
+| name           | 输入框元素属性                           | String  | —                     | —                    |
+| prefix-icon    | 自定义头部图标的名称                     | String  | —                     | el-icon-date         |
+| clear-icon     | 自定义清空图标的名称                     | String  | —                     | el-icon-circle-close |
+| validate-event | 绑定值发生变化时，是否触发表单的校验     | Boolean | —                     | true                 |
+| append-to-body | QuarterPicker 自身是否插入至 body 元素上 | Boolean | —                     | true                 |
 
 ## Picker Options
 
