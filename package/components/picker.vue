@@ -262,7 +262,10 @@ export default {
       if (!this.mountPanel) {
         this.mountPanel = true;
       }
-      this.panelVisible = true;
+
+      if (!this.readonly) {
+        this.panelVisible = true;
+      }
     },
     handleMouseEnter() {
       if (this.readonly || this.pickerDisabled) return;
@@ -287,6 +290,11 @@ export default {
           ) {
             this.panelVisible = false;
           }
+          event.stopPropagation();
+          return;
+        // Tab
+        case 9:
+          this.panelVisible = false;
           event.stopPropagation();
           return;
       }
